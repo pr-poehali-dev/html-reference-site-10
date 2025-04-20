@@ -81,7 +81,7 @@ const AlgebraPage = () => {
                 <AccordionItem value="log-1">
                   <AccordionTrigger>Определение и основные свойства</AccordionTrigger>
                   <AccordionContent>
-                    <p className="mb-2"><strong>Определение:</strong> log<sub>a</sub>b = c, если a<sup>c</sup> = b, где a > 0, a ≠ 1, b > 0</p>
+                    <p className="mb-2"><strong>Определение:</strong> log<sub>a</sub>b = c, если a<sup>c</sup> = b, где a &gt; 0, a ≠ 1, b &gt; 0</p>
                     <p className="font-medium mt-3">Основные свойства:</p>
                     <ul className="space-y-2 list-disc pl-5 mt-1">
                       <li>log<sub>a</sub>1 = 0</li>
@@ -105,7 +105,7 @@ const AlgebraPage = () => {
                       </li>
                       <li>
                         <p><strong>Уравнения вида:</strong> log<sub>a</sub>f(x) = log<sub>a</sub>g(x)</p>
-                        <p>Решение: f(x) = g(x) при условии f(x) > 0, g(x) > 0</p>
+                        <p>Решение: f(x) = g(x) при условии f(x) &gt; 0, g(x) &gt; 0</p>
                       </li>
                       <li>
                         <p><strong>Уравнения, сводящиеся к квадратным:</strong></p>
@@ -128,13 +128,13 @@ const AlgebraPage = () => {
                 <AccordionItem value="exp-1">
                   <AccordionTrigger>Показательная функция</AccordionTrigger>
                   <AccordionContent>
-                    <p className="mb-2"><strong>Показательная функция:</strong> y = a<sup>x</sup>, где a > 0, a ≠ 1</p>
+                    <p className="mb-2"><strong>Показательная функция:</strong> y = a<sup>x</sup>, где a &gt; 0, a ≠ 1</p>
                     <p className="font-medium mt-3">Свойства показательной функции:</p>
                     <ul className="space-y-2 list-disc pl-5 mt-1">
                       <li>Область определения: вся числовая прямая R</li>
                       <li>Область значений: (0; +∞)</li>
-                      <li>При a > 1: функция возрастает на всей области определения</li>
-                      <li>При 0 < a < 1: функция убывает на всей области определения</li>
+                      <li>При a &gt; 1: функция возрастает на всей области определения</li>
+                      <li>При 0 &lt; a &lt; 1: функция убывает на всей области определения</li>
                       <li>График проходит через точку (0,1)</li>
                     </ul>
                   </AccordionContent>
