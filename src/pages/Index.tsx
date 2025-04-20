@@ -1,79 +1,77 @@
 
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { BookOpen, Atom, Flask } from "lucide-react";
+import { PiMathOperationsBold } from "react-icons/pi";
+import { Atom, BookOpen, Beaker } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container px-4 py-8 mx-auto">
-        <header className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-primary mb-2">Справочник для 10-го класса</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Полезные материалы и формулы по основным предметам школьной программы
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4 max-w-5xl">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-primary mb-3">Справочник 10-го класса</h1>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Ваш удобный справочник по основным предметам. Выберите предмет, чтобы найти формулы, законы и теории.
           </p>
-        </header>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardHeader className="flex flex-row items-center gap-4">
-              <BookOpen className="h-8 w-8 text-primary" />
-              <div>
-                <CardTitle>Математика</CardTitle>
-                <CardDescription>Алгебра и геометрия</CardDescription>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <p className="mb-4">
-                Формулы, теоремы и методы решения уравнений, неравенств и задач по планиметрии и стереометрии.
-              </p>
-              <Link to="/math">
-                <Button className="w-full">Перейти к разделу</Button>
-              </Link>
-            </CardContent>
-          </Card>
-
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardHeader className="flex flex-row items-center gap-4">
-              <Atom className="h-8 w-8 text-primary" />
-              <div>
-                <CardTitle>Физика</CardTitle>
-                <CardDescription>Механика и термодинамика</CardDescription>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <p className="mb-4">
-                Основные законы механики, термодинамики и электродинамики с формулами и примерами.
-              </p>
-              <Link to="/physics">
-                <Button className="w-full">Перейти к разделу</Button>
-              </Link>
-            </CardContent>
-          </Card>
-
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardHeader className="flex flex-row items-center gap-4">
-              <Flask className="h-8 w-8 text-primary" />
-              <div>
-                <CardTitle>Химия</CardTitle>
-                <CardDescription>Органическая химия</CardDescription>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <p className="mb-4">
-                Основы органической химии, классы соединений, типы реакций и решение задач.
-              </p>
-              <Link to="/chemistry">
-                <Button className="w-full">Перейти к разделу</Button>
-              </Link>
-            </CardContent>
-          </Card>
         </div>
 
-        <footer className="mt-16 text-center text-sm text-muted-foreground">
-          <p>© 2024 Справочник для 10-го класса. Все права защищены.</p>
-        </footer>
+        <div className="grid md:grid-cols-3 gap-6">
+          <Link to="/math" className="block">
+            <Card className="h-full transition-all hover:shadow-lg">
+              <CardHeader className="pb-2">
+                <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-2">
+                  <BookOpen className="h-6 w-6 text-blue-600" />
+                </div>
+                <CardTitle>Математика</CardTitle>
+                <CardDescription>Алгебра и геометрия</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Тригонометрические формулы, логарифмы, производные, интегралы и основные теоремы геометрии
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
+
+          <Link to="/physics" className="block">
+            <Card className="h-full transition-all hover:shadow-lg">
+              <CardHeader className="pb-2">
+                <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mb-2">
+                  <Atom className="h-6 w-6 text-amber-600" />
+                </div>
+                <CardTitle>Физика</CardTitle>
+                <CardDescription>Механика и молекулярная физика</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Законы Ньютона, законы сохранения, молекулярно-кинетическая теория, 
+                  термодинамика
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
+
+          <Link to="/chemistry" className="block">
+            <Card className="h-full transition-all hover:shadow-lg">
+              <CardHeader className="pb-2">
+                <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-2">
+                  <Beaker className="h-6 w-6 text-green-600" />
+                </div>
+                <CardTitle>Химия</CardTitle>
+                <CardDescription>Органическая химия</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Углеводороды и их производные, типы химических реакций, функциональные группы
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
+        </div>
+
+        <div className="mt-12 text-center text-gray-500 text-sm">
+          <p>© 2023 Справочник ученика. Все права защищены.</p>
+        </div>
       </div>
     </div>
   );
