@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import MathPage from "./pages/MathPage";
 import PhysicsPage from "./pages/PhysicsPage";
 import ChemistryPage from "./pages/ChemistryPage";
+import AlgebraPage from "./pages/AlgebraPage";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/math" element={<MathPage />} />
           <Route path="/physics" element={<PhysicsPage />} />
           <Route path="/chemistry" element={<ChemistryPage />} />
+          <Route path="/algebra" element={<AlgebraPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

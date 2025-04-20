@@ -1,8 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { PiMathOperationsBold } from "react-icons/pi";
-import { Atom, BookOpen, Beaker } from "lucide-react";
+import { BookOpen, Atom, Beaker, Calculator } from "lucide-react";
 
 const Index = () => {
   return (
@@ -15,7 +14,7 @@ const Index = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <Link to="/math" className="block">
             <Card className="h-full transition-all hover:shadow-lg">
               <CardHeader className="pb-2">
@@ -28,6 +27,23 @@ const Index = () => {
               <CardContent>
                 <p className="text-gray-600">
                   Тригонометрические формулы, логарифмы, производные, интегралы и основные теоремы геометрии
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
+
+          <Link to="/algebra" className="block">
+            <Card className="h-full transition-all hover:shadow-lg">
+              <CardHeader className="pb-2">
+                <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mb-2">
+                  <Calculator className="h-6 w-6 text-purple-600" />
+                </div>
+                <CardTitle>Алгебра</CardTitle>
+                <CardDescription>Подробный справочник</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Тригонометрия, логарифмы, показательные функции и уравнения, работа с функциями
                 </p>
               </CardContent>
             </Card>
